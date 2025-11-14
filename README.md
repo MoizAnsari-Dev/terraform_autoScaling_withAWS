@@ -1,5 +1,4 @@
 ## Overview
-
 ### This Terraform project provisions a scalable and fault-tolerant EC2 infrastructure on AWS.
 It automatically creates:
 
@@ -83,11 +82,13 @@ key_name      = "my-keypair"
 ```
 terraform init
 ```
+<img width="1790" height="956" alt="image" src="https://github.com/user-attachments/assets/5733721d-b3f4-4313-89ce-d1125a1e0105" />
 
 2️ Preview the Plan
 ```
 terraform plan
 ```
+<img width="1790" height="956" alt="image" src="https://github.com/user-attachments/assets/de9b5857-012b-45ca-ad06-9705b69279c9" />
 
 3️ Apply Configuration
 ```
@@ -95,12 +96,16 @@ terraform apply -auto-approve
 ```
 
 Terraform will:
+<img width="1606" height="38" alt="image" src="https://github.com/user-attachments/assets/1777ce9a-b077-4215-9eb6-a3738301056d" />
+<img width="1664" height="820" alt="image" src="https://github.com/user-attachments/assets/99e7ac76-dd9d-4df0-9543-27c74ee4195f" />
+
 
   - Create a new VPC, Subnet, and Internet Gateway
   - Set up a Security Group
   - Create a Launch Template with your EC2 configuration
   - Deploy an Auto Scaling Group with 1–3 instances
   - Automatically install Nginx and create ```devopsadmin``` user
+<img width="1790" height="956" alt="image" src="https://github.com/user-attachments/assets/c35e8c17-dd51-4330-a888-1571c35ad4df" />
 ---
 ## Connect to EC2 Instance
 Find the public IP of an instance:
@@ -111,6 +116,10 @@ SSH into EC2
 ssh -i my-keypair.pem ubuntu@<EC2_PUBLIC_IP>
 
 ```
+<img width="1603" height="112" alt="image" src="https://github.com/user-attachments/assets/18a0c99a-3792-446f-a9ae-16dda5b7a34d" />
+<img width="1609" height="823" alt="image" src="https://github.com/user-attachments/assets/2025eb0a-3977-4ffc-b706-eb49d3a2c16b" />
+
+
 Switch to your custom user:
 ```
 sudo su - devopsadmin
@@ -139,3 +148,6 @@ To remove everything:
 ```
 terraform destroy -auto-approve
 ```
+<img width="1621" height="951" alt="image" src="https://github.com/user-attachments/assets/e339401e-d976-43bb-a845-88b1d9ad0901" />
+---
+
